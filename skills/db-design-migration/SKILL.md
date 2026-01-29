@@ -1,3 +1,8 @@
+---
+name: db-design-migration
+description: Tasks 정의 이후 DB 설계, 마이그레이션 작성, 스키마 문서 갱신까지 수행하는 스킬.
+---
+
 # Skill: db-design-migration
 
 Tasks가 모두 정의된 이후에만 DB 설계와 마이그레이션을 수행한다. 이 스킬은 스키마 설계, 마이그레이션 작성, 스키마 문서 갱신까지 포함한다.

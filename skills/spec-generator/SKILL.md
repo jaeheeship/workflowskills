@@ -1,4 +1,9 @@
-# Skill: execution-spec-generator
+---
+name: spec-generator
+description: Human-friendly PRD를 AI agent가 실행 가능한 Execution Spec으로 변환하는 스킬. task 분해와 task loop의 단일 입력 계약(single source of truth)을 만든다.
+---
+
+# Skill: spec-generator
 
 Human-friendly PRD를 AI agent가 실행 가능한 Execution Spec으로 변환하는 스킬.  
 이 스펙은 task 분해와 task loop의 단일 입력 계약(single source of truth)이다.
@@ -198,6 +203,33 @@ Assumptions
 ---
 
 ## 6. Traceability Map Generation
+
+### Goal
+
+PRD에서 나온 요구사항이 Execution Spec의 항목으로 어떻게 이동했는지
+**추적 가능성(Traceability)** 을 명시적으로 남긴다.
+
+### Rules
+
+- PRD의 Core Use Cases / Scope / Decisions 항목을 출처로 연결한다
+- FR, PRD-AC, Scope, Constraints/Assumptions에 대한 출처를 표로 기록한다
+- 모호한 문장은 Traceability로 해결하지 말고 Assumptions로 고정한다
+
+### Output Example
+
+```text
+Traceability
+
+| Spec Item | Source (PRD Section) |
+| --------- | -------------------- |
+| FR-1      | Core Use Cases #1    |
+| FR-2      | Core Use Cases #2    |
+| PRD-AC-1  | Goal #1              |
+| Scope In  | Scope/In             |
+| Scope Out | Scope/Out            |
+| C-1       | Decisions #2         |
+| A-1       | Decisions #3         |
+```
 
 ### Goal
 
