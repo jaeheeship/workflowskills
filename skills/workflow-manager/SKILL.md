@@ -39,6 +39,17 @@ Workflow Gatekeeper (Gate 5: DB Artifacts)
 4. Workflow Gatekeeper 게이트 통과 여부 확인
 5. 통과 시 다음 단계로 진행, 미통과 시 수정 루프로 전환
 
+## Modes
+
+- `interactive`: 다음 단계로 넘어가기 전 사용자 승인 질문을 한다.
+- `auto`: 사용자 승인 질문 없이 Gate 결과에 따라 자동으로 다음 단계로 진행한다.
+
+### Auto Mode Rules
+
+- Gate 결과가 `APPROVE`면 즉시 다음 단계로 이동한다.
+- Gate 결과가 `HOLD` 또는 `REJECT`면 해당 단계 산출물을 수정하는 루프로 진입한다.
+- 질문은 필수 입력 누락 또는 명확한 선택지가 없는 경우에만 허용한다.
+
 ## Stage Definitions
 
 ### Stage 1: PRD Creation
@@ -88,6 +99,7 @@ Workflow Gatekeeper (Gate 5: DB Artifacts)
 ## Output Format (Suggested)
 
 ```
+Mode: {interactive | auto}
 Current Stage: {PRD | SPEC | TASKS}
 Next Action: {스킬 호출 지시}
 Required Inputs: {필요 파일}
