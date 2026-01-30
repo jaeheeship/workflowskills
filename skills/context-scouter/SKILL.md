@@ -1,6 +1,12 @@
 ---
 name: context-scouter
-description: PRD 문서와 이미 작성된 태스크를 읽고, 태스크 수행에 필요한 컨텍스트를 사전에 주입하기 위해 `context.md`로 정리하는 작업에 사용한다. 예: "태스크용 컨텍스트 주입", "context.md 만들어줘", "이 태스크 수행에 필요한 컨텍스트 정리" 등.
+description: |
+  PRD 문서와 이미 작성된 태스크를 읽고, 태스크 수행에 필요한 컨텍스트를 사전에 주입하기 위해 `context.md`로 정리하는 작업에 사용합니다.
+
+  사용 예시:
+  - "태스크용 컨텍스트 주입"
+  - "context.md 만들어줘"
+  - "이 태스크 수행에 필요한 컨텍스트 정리"
 ---
 
 # Context Scouter
@@ -19,17 +25,17 @@ PRD와 태스크를 함께 읽고, 단일 태스크 수행에 필요한 코드/�
 - 해당 태스크의 목표/입력/출력을 파악하고 필요한 클래스/파일을 나열한다.
 - `rg`로 관련 클래스/파일을 찾고, 이미 존재하는 것과 없는 것을 나눈다.
 - 일반적으로 확인할 위치:
-    - 모델: `app/Models`
-    - 액션/서비스: `app/Actions` / `app/Services`
-    - 컨트롤러: `app/Http/Controllers`
-    - 폼 요청: `app/Http/Requests`
-    - 리소스: `app/Http/Resources`
-    - Livewire/Volt: `app/Livewire` / `resources/views/livewire`
-    - 라우트: `routes/`
-    - 마이그레이션: `database/migrations`
-    - 정책/게이트: `app/Policies` / `app/Providers`
-    - 문서: `docs/` (특히 `docs/route.md`, `docs/schemas/`)
-    - 프로젝트 관련문서 : `workspace/`
+  - 모델: `app/Models`
+  - 액션/서비스: `app/Actions` / `app/Services`
+  - 컨트롤러: `app/Http/Controllers`
+  - 폼 요청: `app/Http/Requests`
+  - 리소스: `app/Http/Resources`
+  - Livewire/Volt: `app/Livewire` / `resources/views/livewire`
+  - 라우트: `routes/`
+  - 마이그레이션: `database/migrations`
+  - 정책/게이트: `app/Policies` / `app/Providers`
+  - 문서: `docs/` (특히 `docs/route.md`, `docs/schemas/`)
+  - 프로젝트 관련문서 : `workspace/`
 
 3. 컨텍스트 파일 작성
 
@@ -55,51 +61,51 @@ PRD와 태스크를 함께 읽고, 단일 태스크 수행에 필요한 코드/�
 ## Domain Entities (Models)
 
 - Existing:
-    - <ModelName> — <path>
+  - <ModelName> — <path>
 - To Create:
-    - <ModelName> — 이유/근거(PRD 섹션)
+  - <ModelName> — 이유/근거(PRD 섹션)
 
 ## Actions / Services
 
 - Existing:
-    - <ActionName> — <path>
+  - <ActionName> — <path>
 - To Create:
-    - <ActionName> — 이유/근거
+  - <ActionName> — 이유/근거
 
 ## Controllers / Livewire
 
 - Existing:
-    - <Controller/Component> — <path>
+  - <Controller/Component> — <path>
 - To Create:
-    - <Controller/Component> — 이유/근거
+  - <Controller/Component> — 이유/근거
 
 ## Requests / Resources
 
 - Existing:
-    - <Request/Resource> — <path>
+  - <Request/Resource> — <path>
 - To Create:
-    - <Request/Resource> — 이유/근거
+  - <Request/Resource> — 이유/근거
 
 ## Routes
 
 - Existing:
-    - <route name/path> — <path>
+  - <route name/path> — <path>
 - To Create:
-    - <route name/path> — 이유/근거
+  - <route name/path> — 이유/근거
 
 ## Migrations / Schemas
 
 - Existing:
-    - <migration/schema> — <path>
+  - <migration/schema> — <path>
 - To Create:
-    - <migration/schema> — 이유/근거
+  - <migration/schema> — 이유/근거
 
 ## Policies / Permissions
 
 - Existing:
-    - <Policy/Middleware> — <path>
+  - <Policy/Middleware> — <path>
 - To Create:
-    - <Policy/Middleware> — 이유/근거
+  - <Policy/Middleware> — 이유/근거
 
 ## Notes / Risks
 
